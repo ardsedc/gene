@@ -1,0 +1,17 @@
+{
+  "name": "gene-matrix-website",
+  "version": "1.0.0",
+  "description": "Gene Matrix - حلول تقنية متكاملة",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Static website - upload files to public_html folder'"
+  },
+  "keywords": [
+    "gene-matrix",
+    "website",
+    "static"
+  ],
+  "author": "Gene Matrix",
+  "license": "MIT"
+}
+

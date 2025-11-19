@@ -1,0 +1,19 @@
+{
+  "name": "Gene Matrix - حلول تقنية متكاملة",
+  "short_name": "Gene Matrix",
+  "description": "المعيار الجديد للابتكار المنظم",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "scope": "/"
+}
+

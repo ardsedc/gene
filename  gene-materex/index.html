@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gene Matrix - حلول تقنية متكاملة | المعيار الجديد للابتكار المنظم">
+    <title>Gene Matrix - حلول تقنية متكاملة</title>
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="manifest" href="manifest.json">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Icons -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="icon-mobile" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="10" y1="18" x2="14" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="1.5" fill="currentColor"/></symbol>
+        <symbol id="icon-ai" viewBox="0 0 24 24"><rect x="5" y="6" width="14" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="11" r="1.5" fill="currentColor"/><circle cx="15" cy="11" r="1.5" fill="currentColor"/><path d="M9 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 10l2-2m14 0l2 2M7 4l5-2 5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+        <symbol id="icon-gear" viewBox="0 0 24 24"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="currentColor"/></symbol>
+        <symbol id="icon-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="icon-diamond" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 3l6 18 6-18M6 3l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="icon-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="icon-team" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 3.13a4 4 0 0 1 0 7.75" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="icon-design" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 17l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="icon-security" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+        <symbol id="icon-speed" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="icon-support" viewBox="0 0 24 24"><path d="M11 12h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 18h1a2 2 0 0 0 0-4H5c-.6 0-1.1.2-1.4.6L3 18" fill="none" stroke="currentColor" stroke-width="2"/><path d="M22 12h-2a2 2 0 1 1 0-4h3c.6 0 1.1.2 1.4.6L21 14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M17 18h-1a2 2 0 0 1 0-4h3c.6 0 1.1.2 1.4.6L21 18" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.35-4.35" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+        <symbol id="icon-check" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="22 4 12 14.01 9 11.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+        <symbol id="icon-analytics" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10" stroke="currentColor" stroke-width="2"/><line x1="12" y1="20" x2="12" y2="4" stroke="currentColor" stroke-width="2"/><line x1="6" y1="20" x2="6" y2="14" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="icon-laptop" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="2" y1="16" x2="22" y2="16" stroke="currentColor" stroke-width="2"/><line x1="6" y1="20" x2="18" y2="20" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="icon-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="icon-cloud" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="icon-email" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="icon-location" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    </svg>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="#home" class="logo">
+                    <img src="logo.svg" alt="Gene Matrix" class="logo-image">
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="قائمة التنقل">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">الرئيسية</a></li>
+                    <li><a href="#about" class="nav-link">من نحن</a></li>
+                    <li><a href="#services" class="nav-link">خدماتنا</a></li>
+                    <li><a href="#process" class="nav-link">كيف نعمل</a></li>
+                    <li><a href="#technologies" class="nav-link">تقنياتنا</a></li>
+                    <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Gene Matrix</span>
+                    <span class="hero-subtitle">المعيار الجديد للابتكار المنظم</span>
+                </h1>
+                <p class="hero-description">
+                    شركة سعودية متخصصة في تقديم حلول تقنية متكاملة تجمع بين الابتكار والجودة العالية. 
+                    نطور تطبيقات الهواتف، حلول الذكاء الاصطناعي، والحلول المخصصة لتلبية احتياجاتك.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">ابدأ مشروعك الآن</a>
+                    <a href="#services" class="btn btn-secondary">استكشف خدماتنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">خدماتنا</h2>
+                <p class="section-subtitle">حلول تقنية متكاملة لمشروعك</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg><use href="#icon-mobile"></use></svg>
+                    </div>
+                    <h3>تطبيقات الهواتف الذكية</h3>
+                    <p>نطور تطبيقات متطورة لـ iOS و Android بتجربة مستخدم استثنائية وأداء عالي. نستخدم أحدث التقنيات لضمان تطبيقات سريعة وسلسة.</p>
+                    <ul class="service-features">
+                        <li>تطبيقات iOS و Android</li>
+                        <li>واجهات احترافية (UI/UX)</li>
+                        <li>أداء عالي وسرعة</li>
+                        <li>تكامل مع الخدمات السحابية</li>
+                        <li>نشر على المتاجر الإلكترونية</li>
+                        <li>دعم وصيانة مستمرة</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg><use href="#icon-ai"></use></svg>
+                    </div>
+                    <h3>الذكاء الاصطناعي والأتمتة</h3>
+                    <p>حلول ذكية للأتمتة والذكاء الاصطناعي لتحسين الكفاءة واتخاذ القرارات. نساعدك في أتمتة عملياتك وتحليل بياناتك.</p>
+                    <ul class="service-features">
+                        <li>أتمتة العمليات الذكية</li>
+                        <li>تحليل البيانات والتنبؤ</li>
+                        <li>روبوتات المحادثة (Chatbots)</li>
+                        <li>تعلم الآلة (Machine Learning)</li>
+                        <li>معالجة اللغة الطبيعية (NLP)</li>
+                        <li>رؤية الحاسوب (Computer Vision)</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg><use href="#icon-gear"></use></svg>
+                    </div>
+                    <h3>الحلول المخصصة</h3>
+                    <p>حلول تقنية مصممة خصيصاً لاحتياجات عملك مع ضمان التكامل والقياسية. نبدأ بفهم عميق لعملك ثم نطور الحل الأمثل.</p>
+                    <ul class="service-features">
+                        <li>حلول مصممة حسب الطلب</li>
+                        <li>أنظمة إدارة متكاملة (ERP, CRM)</li>
+                        <li>تطوير المواقع والمنصات</li>
+                        <li>تكامل الأنظمة الموجودة</li>
+                        <li>حلول قابلة للتوسع</li>
+                        <li>دعم وصيانة مستمرة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">من نحن</h2>
+                <p class="section-subtitle">تعرف على Gene Matrix</p>
+            </div>
+            
+            <!-- Company Introduction -->
+            <div class="about-intro">
+                <div class="about-intro-content">
+                    <p>
+                        <strong>Gene Matrix</strong> هي شركة سعودية رائدة متخصصة في تقديم حلول تقنية متكاملة ومبتكرة. 
+                        تأسست بهدف تأسيس معيار جديد في قطاع التقنية بالمملكة العربية السعودية، حيث تجمع بين 
+                        الابتكار والجودة العالية والشفافية الكاملة في كل مشروع ننفذه.
+                    </p>
+                    <p>
+                        نحن فريق من الخبراء والمطورين المحترفين الذين يمتلكون سنوات من الخبرة في تطوير التطبيقات، 
+                        الذكاء الاصطناعي، والحلول التقنية المخصصة. نعمل مع الشركات والمؤسسات في مختلف القطاعات 
+                        لمساعدتهم في تحقيق أهدافهم الرقمية والتحول الرقمي.
+                    </p>
+                    <p>
+                        نؤمن بأن التقنية يجب أن تكون في خدمة الإنسان، وأن كل حل تقني يجب أن يكون مصمماً خصيصاً 
+                        لاحتياجات العميل. لذلك، نبدأ كل مشروع بفهم عميق لاحتياجاتك وأهدافك، ثم نصمم ونطور الحلول 
+                        التي تحقق النتائج المرجوة.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Vision, Mission, Values -->
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg><use href="#icon-target"></use></svg>
+                    </div>
+                    <h3>رؤيتنا</h3>
+                    <p>أن نكون الرائدة في تقديم حلول تقنية متكاملة ومبتكرة تساهم في دفع عجلة التحول الرقمي وتحقيق رؤية المملكة 2030. نسعى لأن نكون الشريك المفضل للشركات والمؤسسات في رحلتها الرقمية.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg><use href="#icon-rocket"></use></svg>
+                    </div>
+                    <h3>رسالتنا</h3>
+                    <p>تقديم حلول تقنية متقدمة تلبي احتياجات السوق المحلي والإقليمي من خلال فريق محترف يلتزم بالجودة المطلقة والشفافية الكاملة. نعمل على بناء شراكات طويلة الأمد مع عملائنا.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg><use href="#icon-diamond"></use></svg>
+                    </div>
+                    <h3>قيمنا</h3>
+                    <p><strong>الجودة المطلقة:</strong> نلتزم بأعلى معايير الجودة في كل مشروع.<br>
+                    <strong>الشفافية الكاملة:</strong> نؤمن بأن الشفافية تبني الثقة.<br>
+                    <strong>الابتكار المنضبط:</strong> نبتكر بحكمة ونطور بحذر.</p>
+                </div>
+            </div>
+
+            <!-- Why Choose Us -->
+            <div class="why-choose-us">
+                <h3 class="why-title">مميزاتنا</h3>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg><use href="#icon-star"></use></svg>
+                        </div>
+                        <h4>خبرة واسعة</h4>
+                        <p>سنوات من الخبرة في تطوير الحلول التقنية المتقدمة</p>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg><use href="#icon-team"></use></svg>
+                        </div>
+                        <h4>فريق محترف</h4>
+                        <p>فريق من المطورين والمصممين والخبراء في مختلف المجالات</p>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg><use href="#icon-design"></use></svg>
+                        </div>
+                        <h4>حلول مخصصة</h4>
+                        <p>كل مشروع مصمم خصيصاً لاحتياجاتك وأهدافك</p>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg><use href="#icon-security"></use></svg>
+                        </div>
+                        <h4>جودة عالية</h4>
+                        <p>نلتزم بأعلى معايير الجودة والأمان في كل مشروع</p>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg><use href="#icon-speed"></use></svg>
+                        </div>
+                        <h4>سرعة التنفيذ</h4>
+                        <p>ننهي المشاريع في الوقت المحدد دون التضحية بالجودة</p>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg><use href="#icon-support"></use></svg>
+                        </div>
+                        <h4>دعم مستمر</h4>
+                        <p>نوفر الدعم والصيانة المستمرة بعد إطلاق المشروع</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">كيف نعمل</h2>
+                <p class="section-subtitle">منهجية عملنا لضمان نجاح مشروعك</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <svg><use href="#icon-search"></use></svg>
+                    </div>
+                    <h3>التحليل والتخطيط</h3>
+                    <p>نبدأ بفهم عميق لاحتياجاتك وأهدافك. نجري دراسة شاملة للمشروع ونضع خطة عمل واضحة.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <svg><use href="#icon-design"></use></svg>
+                    </div>
+                    <h3>التصميم</h3>
+                    <p>نصمم واجهات مستخدم احترافية وسهلة الاستخدام. نركز على تجربة المستخدم والتصميم الحديث.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <svg><use href="#icon-laptop"></use></svg>
+                    </div>
+                    <h3>التطوير</h3>
+                    <p>نطور الحلول بأحدث التقنيات والأدوات. نتبع أفضل الممارسات في البرمجة والتطوير.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <svg><use href="#icon-check"></use></svg>
+                    </div>
+                    <h3>الاختبار</h3>
+                    <p>نجري اختبارات شاملة لضمان الجودة والأداء. نختبر على مختلف الأجهزة والأنظمة.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-icon">
+                        <svg><use href="#icon-rocket"></use></svg>
+                    </div>
+                    <h3>النشر والدعم</h3>
+                    <p>ننشر المشروع ونوفر الدعم الفني المستمر. نضمن أن كل شيء يعمل بسلاسة.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-icon">
+                        <svg><use href="#icon-analytics"></use></svg>
+                    </div>
+                    <h3>المتابعة والتطوير</h3>
+                    <p>نتابع أداء المشروع بعد النشر ونطوره باستمرار بناءً على الملاحظات والتحسينات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="technologies">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">التقنيات المستخدمة</h2>
+                <p class="section-subtitle">أحدث التقنيات والأدوات لتقديم أفضل الحلول</p>
+            </div>
+            
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <div class="tech-category-header">
+                        <div class="tech-category-icon">
+                            <svg><use href="#icon-laptop"></use></svg>
+                        </div>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <div class="tech-category-header">
+                        <div class="tech-category-icon">
+                            <svg><use href="#icon-gear"></use></svg>
+                        </div>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">RESTful API</span>
+                        <span class="tech-tag">GraphQL</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <div class="tech-category-header">
+                        <div class="tech-category-icon">
+                            <svg><use href="#icon-mobile"></use></svg>
+                        </div>
+                        <h3>Mobile Development</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">iOS</span>
+                        <span class="tech-tag">Android</span>
+                        <span class="tech-tag">Xamarin</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <div class="tech-category-header">
+                        <div class="tech-category-icon">
+                            <svg><use href="#icon-ai"></use></svg>
+                        </div>
+                        <h3>AI & Machine Learning</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">OpenAI</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">Deep Learning</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <div class="tech-category-header">
+                        <div class="tech-category-icon">
+                            <svg><use href="#icon-database"></use></svg>
+                        </div>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">SQLite</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <div class="tech-category-header">
+                        <div class="tech-category-icon">
+                            <svg><use href="#icon-cloud"></use></svg>
+                        </div>
+                        <h3>Cloud & DevOps</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Azure</span>
+                        <span class="tech-tag">Google Cloud</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">CI/CD</span>
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>جاهز لبدء مشروعك؟</h2>
+                <p>اتصل بنا اليوم وناقش احتياجاتك مع فريقنا المتخصص</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">تواصل معنا الآن</a>
+                    <a href="#services" class="btn btn-secondary">استكشف خدماتنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">تواصل معنا</h2>
+                <p class="section-subtitle">نحن هنا لمساعدتك في تحقيق أهدافك الرقمية</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg><use href="#icon-email"></use></svg>
+                        </div>
+                        <div>
+                            <h3>البريد الإلكتروني</h3>
+                            <p>info@genematrix.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg><use href="#icon-mobile"></use></svg>
+                        </div>
+                        <div>
+                            <h3>الهاتف</h3>
+                            <p>+966 50 123 4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg><use href="#icon-location"></use></svg>
+                        </div>
+                        <div>
+                            <h3>العنوان</h3>
+                            <p>المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">الاسم</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">الرسالة</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>ابدأ رحلتك الرقمية معنا اليوم</h2>
+                <p>نحن هنا لتحويل أفكارك إلى واقع رقمي متميز</p>
+                <a href="#contact" class="btn btn-primary btn-large">احجز استشارة مجانية</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.svg" alt="Gene Matrix" class="footer-logo-img">
+                    <p>حلول تقنية متكاملة - المعيار الجديد للابتكار المنظم</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gene Matrix. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
